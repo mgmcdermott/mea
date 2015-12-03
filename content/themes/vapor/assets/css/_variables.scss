@@ -1,0 +1,16 @@
+$body-background-color: #fff;
+$base-font-family: "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+$base-font-color: #7f8c8d;
+$header-font-family: "Roboto Slab", $base-font-family;
+$header-font-color: #151515;
+$header-link-color: $header-font-color;
+$secondary-font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+$pre-font-family: "Consolas", Courier, monospace;
+$link-color: #3498db;
+$link-color-hover: darken($link-color, 50%);
+$border-color: #ecf0f1;
+$subtle-color: rgba(0, 0, 0, .05);
+$homesubtle-color: rgba(0, 0, 0, .04);
+$post-meta-color: #95a5a6;
+$gist-background-color: #fdfdfd;
+$max-page-width: 600px;
