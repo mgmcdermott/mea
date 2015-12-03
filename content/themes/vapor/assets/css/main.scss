@@ -1,2 +1,97 @@
+@import 'popup';
 @import 'variables';
 @import 'base';
+@import 'photoswipe';
+@import 'default-skin';
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: .8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -100px;
+  min-height: 100%;
+  position: relative;
+}
+
+main {
+  padding-bottom: 100px;
+}
+
+.pt2 { padding-top: 2rem; }
+
+footer,
+.push {
+  height: 100px;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.free-wall {
+  margin: 20px 0;
+}
+
+.photo-wrap {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  // margin: 10px 0;
+  // padding: 20px 0;
+  height: 400px;
+  width: 340px;
+}
+
+.photo-link {
+  img {
+  border-radius: 5px;
+  }
+}
+
+.cell {
+  background-size: cover;
+  height: 320px;
+  width: 320px;
+}
+
+figcaption {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.photo-likes {
+  float: left;
+}
+
+.photo-caption {
+  float: right;
+}

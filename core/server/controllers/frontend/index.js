@@ -114,6 +114,7 @@ function renderChannel(channelOpts) {
 
 frontendControllers = {
     index: renderChannel(_.cloneDeep(channelConfig.index)),
+    blog: renderChannel(_.cloneDeep(channelConfig.blog)),
     tag: renderChannel(_.cloneDeep(channelConfig.tag)),
     author: renderChannel(_.cloneDeep(channelConfig.author)),
     rss: function (req, res, next) {

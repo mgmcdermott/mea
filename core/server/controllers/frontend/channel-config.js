@@ -2,6 +2,10 @@ var config = require('../../config'),
     defaults;
 
 defaults = {
+    blog: {
+        name: 'index',
+        route: '/blog'
+    },
     index: {
         name: 'home',
         route: '/',

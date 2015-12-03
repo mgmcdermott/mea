@@ -19,7 +19,7 @@ var config = require('../../config'),
     privatePattern = new RegExp('^\\/' + config.routeKeywords.private + '\\/'),
     indexPattern = new RegExp('^\\/' + config.routeKeywords.page + '\\/'),
     rssPattern = new RegExp('^\\/rss\\/'),
-    homePattern = new RegExp('^\\/$');
+    homePattern = new RegExp('^\\/$|^\\/blog\\/');
 
 function setResponseContext(req, res, data) {
     var pageParam = req.params && req.params.page !== undefined ? parseInt(req.params.page, 10) : 1;

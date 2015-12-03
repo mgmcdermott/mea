@@ -18,49 +18,47 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/freewall/1.0.5/freewall.min.js"></script>
+    <script src="{{asset "js/photoswipe.min.js"}}"></script>
+    <script src="{{asset "js/photoswipe-ui-default.min.js"}}"></script>
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-
+  <div class="wrapper">
     <header class="site-header px2 px-responsive">
-      <div class="mt2 wrap">
-        <div class="measure">
-          <a href="/" class="site-title">Marielle Avallone</a>
-          <nav class="site-nav right">
-            <a href="/about/">About</a>
-            <!-- <a href="/contact/">Contact</a> -->
-          </nav>
-          <div class="clearfix"></div>
-          <div class="social-icons">
-            <div class="left">
-              <a class="fa fa-github" href="https://github.com/adammenges"></a>
-              <a class="fa fa-rss" href="/feed.xml"></a>
-              <a class="fa fa-twitter" href="https://twitter.com/adammenges"></a>
-              <a class="fa fa-google-plus" href="https://plus.google.com/+AdamMenges/posts"></a>
-              <a class="fa fa-envelope" href="mailto:adam@adammenges.com"></a>
-              <a class="fa fa-linkedin" href="https://www.linkedin.com/in/adammenges"></a>
-              <a class="fa fa-angellist" href="https://angel.co/adammenges"></a>
-            </div>
+      <div class="pt2 wrap">
+        <a href="/" class="site-title">Marielle Avallone</a>
+        <nav class="site-nav right">
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <!-- <a href="/contact/">Contact</a> -->
+        </nav>
+        <div class="clearfix"></div>
+        <div class="social-icons">
+          <div class="left">
+            <a class="fa fa-twitter" href="https://twitter.com/meavallone" target="_blank"></a>
+            <a class="fa fa-instagram" href="https://www.instagram.com/meavallone/" target="_blank"></a>
+            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/marielleavallone" target="_blank"></a>
+            <a class="fa fa-envelope" href="mailto:marielle@marielleavallone.com" target="_blank"></a>
+            <a class="fa fa-rss" href="/feed.xml"></a>
+          </div>
           <div class="right"></div>
         </div>
         <div class="clearfix"></div>
       </div>
-    </div>
-  </header>
-
+    </header>
     {{{body}}}
-
-    <footer class="site-footer">
-        <div class="inner">
-            <!-- You should swap this info out for your own, would be better to have it customizable, but it doesn't look like ghost currently lets one pull from author data unless you're viewing a post. -->
-            <section><a href="/about">More about me.</a></section>
-             <section class="copyright">&copy; {{date format="YYYY"}} <a href="/about">{{@blog.title}}</a>. All rights reserved.</section>
-        </div>
-    </footer>
-
-    {{ghost_foot}}
-
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
+    <div class="push"></div>
+  </div>
+  <footer class="site-footer">
+    <div class="inner">
+      <!-- You should swap this info out for your own, would be better to have it customizable, but it doesn't look like ghost currently lets one pull from author data unless you're viewing a post. -->
+      <section><a href="/about">More about me.</a></section>
+       <section class="copyright">&copy; {{date format="YYYY"}} <a href="/about">{{@blog.title}}</a>. All rights reserved.</section>
+    </div>
+  </footer>
+  {{ghost_foot}}
+  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 </body>
 </html>
