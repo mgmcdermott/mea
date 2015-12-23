@@ -58,8 +58,8 @@
   }
 
   function shorterString(string) {
-    if (string.length > 88) {
-      return string.substring(0, 88) + '...';
+    if (string.length > 105) {
+      return string.substring(0, 105) + '...';
     }
     return string;
   }
@@ -102,7 +102,7 @@
       selector: '.photo-wrap',
       animate: true,
       cellW: 340,
-      cellH: 420,
+      cellH: 440,
       onResize: function() {
         wall.refresh();
       }
