@@ -1,22 +1,18 @@
 {{!< default}}
 
-<main class="content" role="main">
-
-    {{#foreach posts}}
-
-    <article class="preview">
-        <header>
-            <a href="{{url}}"><h3 class="h2 post-title">{{{title}}}</h3></a>
-            <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>
-        </header>
-        <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
-            <p class="readmore"><a href="{{url}}">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
-        </section>
-    </article>
-
-    {{/foreach}}
-
-    {{pagination}}
-
-</main>
+<div class="post p2 p-responsive wrap" role="main">
+  <div class="measure">
+    <div class="home">
+      <div class="posts">
+        {{#foreach posts}}
+        <div class="preview post">
+          <a class="post-link" href="{{url}}"><h3 class="h2 post-title">{{{title}}}</h3></a>
+          <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>
+          <p class="post-summary">{{excerpt}}&hellip;</p>
+        </div>
+        {{/foreach}}
+        {{pagination}}
+      </div>
+    </div>
+  </div>
+</div>

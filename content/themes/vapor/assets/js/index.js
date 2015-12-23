@@ -3,7 +3,6 @@
   'use strict';
   var api = 'https://api.instagram.com/v1/';
   var userId = '45458342';
-  // var userId = '438998715';
   var token = '?access_token=2306401040.ab103e5.ef5f498b4b03442cb3e34203258d3260';
   var initUrl = api + 'users/' + userId + '/media/recent/' + token;
   var urls = [];
@@ -103,7 +102,7 @@
       selector: '.photo-wrap',
       animate: true,
       cellW: 340,
-      cellH: 400,
+      cellH: 420,
       onResize: function() {
         wall.refresh();
       }

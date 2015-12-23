@@ -1,22 +1,19 @@
 {{!< default}}
 
-<main class="content" role="main">
-
-    <article class="{{post_class}}">
-
+<div class="{{post_class}} p2 p-responsive wrap" role="main">
+  <div class="measure">
         {{#post}}
 
-        <header>
         {{#if tags}}<div class="post-meta tags">Posted in {{tags}}</div>{{/if}}
-        <h1 class="post-title">{{{title}}}</h1>
-        <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>
-        </header>
+        <div class="post-header mb2">
+          <h1>{{{title}}}</h1>
+          <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>
+        </div>
+        <article class="post-content">
+          {{content}}
+        </article>
 
-        <section class="post-content">
-            {{content}}
-        </section>
-
-        <section class="share">
+        {{!-- <section class="share">
             <p class="info">Share this post</p>
             <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -30,47 +27,26 @@
                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 <span class="hidden">Google+</span>
             </a>
-        </section>
-
-        <footer class="post-footer">
-
-            {{#if author}}
-            <section class="author">
-                <div class="authorimage" style="background: url({{author.image}})"></div>
-                <p class="attr">Author</p>
-                <h4><a href="{{author.website}}">{{author.name}}</a></h4>
-                <p class="bio">{{author.bio}}</p>
-            </section>
-            {{/if}}
-
-        </footer>
+        </section> --}}
 
         {{/post}}
 
 
-    <div class="home">
-        <a href="{{@blog.url}}">Home</a>
-    </div>
+      {{!-- <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'meablog'; /* * * CHANGE * * */
 
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          var disqus_identifier = '{{post.id}}';
 
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'meablog'; /* * * CHANGE * * */
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        var disqus_identifier = '{{post.id}}';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-    </article>
-
-</main>
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> --}}
+  </div>
+</div>

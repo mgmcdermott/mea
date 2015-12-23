@@ -2418,14 +2418,18 @@ footer {
 .free-wall {
   margin: 20px 0; }
 
+.loading-indicator {
+  display: block;
+  margin: 0 auto; }
+
 .photo-wrap {
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 4px;
   height: 400px;
   width: 340px; }
 
 .photo-link img {
-  border-radius: 5px; }
+  border-radius: 3px; }
 
 .cell {
   background-size: cover;
