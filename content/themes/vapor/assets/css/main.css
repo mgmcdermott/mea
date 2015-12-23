@@ -2434,7 +2434,8 @@ footer {
 
 figcaption {
   font-size: 1rem;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  margin: 0 20px; }
 
 .photo-likes {
   float: left; }

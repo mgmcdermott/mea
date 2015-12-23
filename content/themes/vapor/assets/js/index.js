@@ -58,6 +58,13 @@
     });
   }
 
+  function shorterString(string) {
+    if (string.length > 88) {
+      return string.substring(0, 88) + '...';
+    }
+    return string;
+  }
+
   function buildPhotoWall(photos) {
     var temp =
       '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="photo-wrap">' +
@@ -69,7 +76,7 @@
             '<i class="fa fa-heart photo-heart"></i> ' +
             '{likes}' +
             '</span>' +
-          '<span class="photo-caption">{caption}</span>' +
+          '<span class="photo-caption">{shortCaption}</span>' +
         '</figcaption>' +
       '</figure>';
     var html = '';
@@ -84,6 +91,7 @@
       var caption = photo.caption.toString().replace(/@.*(?=\s|$)/g, '');
       html += temp
         .replace('{id}', photo.id)
+        .replace(/{shortCaption}/g, shorterString(caption))
         .replace(/{caption}/g, caption)
         .replace(/{photoUrl}/g, photo.url)
         .replace(/{thumbUrl}/g, photo.thumbUrl)
