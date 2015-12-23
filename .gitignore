@@ -1,4 +1,5 @@
-node_modules
-.sass_cache
+node_modules/
+.sass_cache/
 .tern-port
-**/*.db
+ghost-dev.db
+ghost.db
